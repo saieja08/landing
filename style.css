@@ -19,6 +19,7 @@
      width: 100%;
      position: fixed;
      z-index: 1000;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
  }
 
@@ -47,10 +48,22 @@
      color: black;
  }
 
- .btn a {
+ .btns a {
      padding: 10px;
      background-color: black;
      color: white;
+     border: 1px solid black;
+ }
+
+ .btns a:hover {
+     padding: 10px;
+     border: 1px solid black;
+     color: black;
+     background-color: white;
+ }
+
+ .btn {
+     display: none;
  }
 
  .barlinks {
@@ -58,6 +71,7 @@
      flex-direction: column;
      align-items: center;
      justify-content: center;
+     gap: 1em;
  }
 
  .barlinks li {
@@ -70,7 +84,7 @@
  }
 
  @media (max-width:710px) {
-     .button {
+     .btn {
          display: block;
      }
 
@@ -84,6 +98,7 @@
      margin-top: 60px;
      background-color: black;
      color: white;
+     padding: 3em;
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -96,8 +111,10 @@
  }
 
  img {
+     margin-top: 1em;
      max-width: 100%;
      height: auto;
+     border-radius: 25px;
  }
 
  .button {
@@ -121,11 +138,26 @@
      padding: 10px 20px 10px 20px;
  }
 
+ .btn1:hover {
+     background-color: white;
+     color: black;
+     padding: 10px 20px 10px 20px;
+ }
+
  .btn2 {
      background-color: white;
      color: black;
      padding: 10px 20px 10px 20px;
+     border: 1px solid white;
      border-radius: 20px;
+ }
+
+ .btn2:hover {
+
+     color: white;
+     background-color: black;
+     padding: 10px 20px 10px 20px;
+     border-radius: 30px;
  }
 
  .flex {
@@ -138,6 +170,41 @@
      padding: 1em;
 
  }
+
+ .hpart2 {
+     overflow: hidden;
+     /* Ensure content doesn't extend beyond this container */
+ }
+
+ .hpart2 .row {
+     margin: 0 -5px;
+ }
+
+ .hpart2 .col {
+     padding: 0 5px;
+ }
+
+ .hpart2 .felx {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 1px solid rgb(196, 193, 193);
+     margin-top: 0.5em;
+     /* Adjusted margin-top */
+     margin-bottom: 0.5em;
+     /* Adjusted margin-bottom */
+     padding: 1em;
+ }
+
+ @media (min-width: 576px) {
+     .hpart2 .felx {
+         margin-top: 1em;
+         /* Default margin-top for larger screens */
+         margin-bottom: 1em;
+         /* Default margin-bottom for larger screens */
+     }
+ }
+
 
  .hpart3 {
      display: flex;
@@ -155,6 +222,19 @@
      width: 60px;
  }
 
+ @media (max-width:950px) {
+     .hpart3 {
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .card {
+         width: 100% !important;
+     }
+ }
+
+
  .hpart4 {
      display: flex;
      align-items: center;
@@ -171,7 +251,7 @@
  }
 
  .hpright {
-     width: 30%;
+     width: 40%;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -202,51 +282,107 @@
      padding: 0.5em 1em 0.5em 1em;
  }
 
+ @media (max-width: 1030px) {
+     .hpright img {
+         width: 300px;
+     }
+ }
+
+ @media (max-width:750px) {
+     .hpart4 {
+         flex-direction: column-reverse;
+     }
+
+     .hpleft {
+         width: 100%;
+     }
+
+     .hpright {
+         width: 100%;
+     }
+
+     .hpright img {
+         width: 500px;
+     }
+ }
+
+ @media (max-width: 524px) {
+     .hpright img {
+         width: 300px;
+     }
+ }
+
  .hpart5 {
      display: flex;
      align-items: center;
      justify-content: space-between;
      padding: 3em;
      padding-right: 3em;
- }
-
- .hpleft1 {
-     width: 30%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
-
- .hpright1 {
-     padding-top: 3em;
-     padding-bottom: 3em;
-     width: 70%;
+     gap: 2em;
+     background-color: black;
  }
 
  .hpleft1 img {
-     width: 300px;
+     width: 500px;
  }
 
- .hpbtn2 {
+ .hpright1 {
+     color: white;
+ }
+
+ .hpbtn {
      display: flex;
      gap: 1em;
  }
 
  .hpfrist {
      text-decoration: none;
-     background-color: black;
+     padding: 5px 10px 5px 10px;
+     border: 1px solid white;
      color: white;
-     padding: 0.5em 1em 0.5em 1em;
  }
 
  .hpsecond {
      text-decoration: none;
+     padding: 5px 10px 5px 10px;
      background-color: white;
      color: black;
-     border: 2px solid black;
-     border-radius: 35px;
-     padding: 0.5em 1em 0.5em 1em;
+     border-radius: 20px;
  }
+
+ @media (max-width: 1030px) {
+     .hpleft1 img {
+         width: 300px;
+     }
+ }
+
+ @media (max-width:750px) {
+     .Hpart5 {
+         flex-direction: column;
+     }
+
+     .hpleft1 {
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .hpright1 {
+         width: 100%;
+     }
+
+     .hpleft1 img {
+         width: 500px;
+     }
+ }
+
+ @media (max-width: 524px) {
+     .hpleft1 img {
+         width: 300px;
+     }
+ }
+
 
  .hpart6 {
      display: flex;
@@ -293,6 +429,40 @@
      border-radius: 35px;
      padding: 0.5em 1em 0.5em 1em;
  }
+
+ @media (max-width: 1030px) {
+     .hpleft2 img {
+         width: 300px;
+     }
+ }
+
+ @media (max-width:750px) {
+     .hpart6 {
+         flex-direction: column;
+     }
+
+     .hpleft2 {
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .hpright2 {
+         width: 100%;
+     }
+
+     .hpleft2 img {
+         width: 500px;
+     }
+ }
+
+ @media (max-width: 524px) {
+     .hpleft2 img {
+         width: 300px;
+     }
+ }
+
 
  .hpart7 {
      display: flex;
@@ -369,20 +539,19 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-     justify-content: space-between;
+     justify-content: center;
      background-color: black;
      color: white;
      padding: 3em;
-     padding-right: 3em;
  }
 
  .hpart8 h1 {
-     width: 60%;
+     /*width: 60%;*/
      text-align: center;
  }
 
  .hpart8 p {
-     width: 60%;
+     /*width: 60%;*/
      text-align: center;
 
  }
@@ -469,4 +638,14 @@
 
  .end {
      list-style: none;
+ }
+
+ @media (max-width:736px) {
+     .links {
+         flex-direction: column;
+     }
+
+     .copy {
+         flex-direction: column;
+     }
  }
